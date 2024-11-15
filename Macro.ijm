@@ -1,0 +1,17 @@
+//setTool("oval");
+makeOval(840, 2056, 3416, 3272);
+makeOval(840, 1688, 3416, 3640);
+makeOval(840, 1688, 3416, 3896);
+makeOval(656, 1688, 3600, 3896);
+makeOval(656, 1688, 3600, 3512);
+setBackgroundColor(0, 0, 0);
+run("Clear Outside");
+run("8-bit");
+setAutoThreshold("Default dark no-reset");
+//run("Threshold...");
+//setThreshold(61, 108);
+setOption("BlackBackground", true);
+run("Convert to Mask");
+run("Convert to Mask");
+run("Watershed");
+run("Analyze Particles...", "size=100-Infinity display exclude clear summarize add");
